@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/favicon-32x32.png" type="image/png" sizes="32x32">
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  
+</head>
+<body>
+ <div class="container-fluid d-flex flex-column h-100">
+    
+    <!-- Hero Section -->
+    <div class="row position-relative">
+      <div class="col-12 bg-image" id="hero-section">
+        <h1 id="heading">IP Address Tracker</h1>
+        <div class="d-flex justify-content-center">
+          <div id="input-field" class="input-group">
+            <input type="text" id="search-ip-address" class="form-control" placeholder="Search for any IP address or domain">
+            <button id="search-btn" type="submit" class="btn btn-dark">
+              <img id="search-icon" src="./images/icon-arrow.svg" alt="Search">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info Card -->
+    <div id="info-card" class="shadow">
+      <div class="row">
+        <div class="info-section col-md">
+          <small class="text-muted">IP ADDRESS</small>
+          <div class="info-value" id="ip-address-value">192.212.174.101</div>
+        </div>
+        <div class="info-section col-md">
+          <small class="text-muted">LOCATION</small>
+          <div class="info-value" id="location-value">Brooklyn, NY 10001</div>
+        </div>
+        <div class="info-section col-md">
+          <small class="text-muted">TIMEZONE</small>
+          <div class="info-value" id="timezone-value">UTC -05:00</div>
+        </div>
+        <div class="info-section col-md">
+          <small class="text-muted">ISP</small>
+          <div class="info-value" id="isp-value">SpaceX Starlink</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Section -->
+      <div class="flex-grow-1">
+        <div id="map" class="w-100 h-100"></div>
+      </div>
+
+    
+    
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+  <script src="./script.js"></script>
+</body>
+</html>
